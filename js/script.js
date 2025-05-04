@@ -6,28 +6,18 @@
 'use strict'
 
 function calculate() {
-  // input
-  const movieRating = document.getElementById("movieforage").value
+
+ // input
+  let firstNumber = parseFloat(document.getElementById("numberone").value)
+  const secondNumber = parseFloat(document.getElementById("numbertwo").value)
+  let answer = 0
 
   // process
-  if (movieRating >= 17) {
-    // output
-    document.getElementById("results").innerHTML =
-      "You can see R rated movies."
+  while (firstNumber >= 1) {
+    answer = answer + secondNumber
+  firstNumber = firstNumber - 1;
   }
-
-  else if (movieRating >= 13) {
-    document.getElementById("results").innerHTML =
-      "You can see PG-13 rated movies."
-  }
-
-  else if (movieRating >= 5) {
-    document.getElementById("results").innerHTML =
-      "You can see G and PG rated movies."
-  }
-
-  else {
-    document.getElementById("results").innerHTML =
-      "Uhh, you are to young to see most things."
-  }
+  // output
+  document.getElementById("results").innerHTML =
+  'The number is: ' + answer
 }
